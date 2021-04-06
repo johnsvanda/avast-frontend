@@ -1,5 +1,10 @@
 # avast_accounts
 
+Frontend for Avast Accounts application, after git clone please use following commands:
+```
+npm install
+npm run serve
+```
 ## Project setup
 ```
 npm install
