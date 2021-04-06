@@ -7,12 +7,15 @@
         <option value="daysFilter">Were created in the last 15 days</option>
         <option value="lastFilter">The last 50 accounts</option>
       </select>
-      <div
-        v-for="(account, index) in this.arrayToRender"
-        :key="index"
-        class="account"
-      >
-        <h3>{{ account.name }}</h3>
+      <div class="accounts">
+        <div
+          v-for="(account, index) in this.arrayToRender"
+          :key="index"
+          class="account"
+        >
+          <h3>{{ account.name }}</h3>
+          <p>{{ account.gender }}</p>
+        </div>
       </div>
       <input
         type="button"
@@ -103,6 +106,16 @@ export default {
 
 .account h1 {
   border-bottom: 1.5px solid #ccc;
+}
+
+.accounts {
+  height: 500px;
+  overflow-y: auto;
+  border: 1.5px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 8px 20px;
+  outline: none;
+  color: rgb(82, 82, 82);
 }
 
 input[type="button"] {
