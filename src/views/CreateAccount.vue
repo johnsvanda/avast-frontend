@@ -1,5 +1,5 @@
 <template>
-  <form @submit.once="handleSubmit" class="component">
+  <form @submit.prevent="handleSubmit(e)" class="component">
     <div class="container">
       <h1>Create account</h1>
 
