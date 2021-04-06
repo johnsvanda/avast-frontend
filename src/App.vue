@@ -26,7 +26,7 @@ body {
 }
 .component {
   border-radius: 0.35rem;
-  width: 40%;
+  width: 45%;
   margin: 3rem auto;
   box-shadow: 2px 2px 8px;
   background-color: white;
@@ -40,7 +40,7 @@ body {
 
 .nav {
   border-radius: 0.35rem;
-  width: 40%;
+  width: 45%;
   margin: auto;
   box-shadow: 2px 2px 8px;
   background-color: white;
@@ -55,8 +55,8 @@ body {
 .nav a {
   text-decoration: none;
   margin: 1rem;
-  padding: 1.3rem;
-  border-bottom: 1.5px solid #c4c4c4;
+  padding: 1.25rem;
+  border-bottom: 2px solid #c4c4c4;
 }
 
 a {

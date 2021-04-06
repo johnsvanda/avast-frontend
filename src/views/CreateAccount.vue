@@ -1,16 +1,11 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="component">
+  <form @submit.once="handleSubmit" class="component">
     <div class="container">
       <h1>Create account</h1>
 
       <div class="form-group">
         <label>Name:</label>
-        <input type="text" required v-model="name" />
-      </div>
-
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" required v-model="email" />
+        <input type="text" required v-model="name" maxlength="40" />
       </div>
 
       <div class="form-group">
@@ -20,6 +15,8 @@
           autocomplete="new-password"
           required
           v-model="password"
+          minlength="4"
+          maxlength="40"
         />
       </div>
 
@@ -46,7 +43,6 @@ export default {
   data() {
     return {
       name: "",
-      email: "",
       password: "",
       gender: "",
       submitStatus: "",
@@ -56,7 +52,6 @@ export default {
     handleSubmit() {
       const data = {
         name: this.name,
-        email: this.email,
         password: this.password,
         gender: this.gender,
         created: Date.now(),

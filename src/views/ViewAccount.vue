@@ -5,7 +5,7 @@
       <label>View accounts that:</label>
       <select v-model="currentFilter" @change="handleChange">
         <option value="daysFilter">Were created in the last 15 days</option>
-        <option value="lastFilter">The last 50 accounts</option>
+        <option value="lastFilter">Last 50 accounts</option>
       </select>
       <div class="accounts">
         <div
@@ -40,9 +40,8 @@ export default {
   },
   methods: {
     fetchAccounts() {
-      console.log("fetch");
       this.axios
-        .get("accounts")
+        .get("/accounts")
         .then((res) => (this.accounts = res.data))
         .then(() => this.filterArray(this.currentFilter))
         .catch((err) => console.error(err));
@@ -101,11 +100,7 @@ export default {
 
 <style>
 .account {
-  width: 200px;
-}
-
-.account h1 {
-  border-bottom: 1.5px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .accounts {

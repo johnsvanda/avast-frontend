@@ -6,6 +6,5 @@ import router from "./router";
 
 createApp(App)
   .use(router)
-  .use(router)
   .use(VueAxios, axios)
   .mount("#app");
