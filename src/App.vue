@@ -1,18 +1,14 @@
 <template>
-  <CreateAccount msg="Welcome to Your Vue.js App" />
-  <ViewAccount @refreshAccounts="fetchAccounts" />
+  <div class="nav">
+    <router-link to="/">Create Account</router-link>
+    <router-link to="/ViewAccounts">View Accounts</router-link>
+  </div>
+  <router-view />
 </template>
 
 <script>
-import CreateAccount from "./components/CreateAccount.vue";
-import ViewAccount from "./components/ViewAccount.vue";
-
 export default {
   name: "App",
-  components: {
-    CreateAccount,
-    ViewAccount,
-  },
 };
 </script>
 
@@ -40,5 +36,30 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3rem;
+}
+
+.nav {
+  border-radius: 0.35rem;
+  width: 40%;
+  margin: auto;
+  box-shadow: 2px 2px 8px;
+  background-color: white;
+  padding: 1.3rem 0;
+}
+
+.router-link-active {
+  color: #1b7fdd;
+  border-bottom-color: #1b7fdd !important;
+}
+
+.nav a {
+  text-decoration: none;
+  margin: 1rem;
+  padding: 1.3rem;
+  border-bottom: 1.5px solid #c4c4c4;
+}
+
+a {
+  color: rgb(78, 78, 78);
 }
 </style>

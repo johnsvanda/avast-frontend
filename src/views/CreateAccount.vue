@@ -34,11 +34,10 @@
       <input type="submit" value="Submit" />
     </div>
   </form>
-  <button @click="this.$emit('refreshAccounts')">emit</button>
 </template>
 
 <script>
-import Alert from "./Alert.vue";
+import Alert from "../components/Alert.vue";
 export default {
   name: "CreateAccount",
   components: {
